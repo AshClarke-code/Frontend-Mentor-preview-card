@@ -1,0 +1,34 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  // assuming 16px is default we divide 10 by 16 to get 0.625 === 62.5%
+  font-size: 62.5%;
+  /* writing as % keeps user ability to change browser font size */
+  /* now 1 rem = 10px */
+
+  @media only screen and (max-width: $bp-tiny){
+    font-size: 50%;
+  }
+}
+
+body {
+  box-sizing: border-box;
+  font-size: 1.5rem;
+  font-family: Inter, sans-serif;
+  font-weight: 400;
+}
+
+section {
+  height: 100vh;
+  width: 100%;
+  background-color: $color-background;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
